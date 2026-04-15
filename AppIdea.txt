@@ -29,18 +29,6 @@ import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyApasLxq-LMsBUvtahQftrhR9PCq8kzJig",
-  authDomain: "docusmith-ef6f5.firebaseapp.com",
-  projectId: "docusmith-ef6f5",
-  storageBucket: "docusmith-ef6f5.firebasestorage.app",
-  messagingSenderId: "770279150",
-  appId: "1:770279150:web:3a9de2c1ea72650651d5ff",
-  measurementId: "G-JWWGL9JR62"
-};
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
