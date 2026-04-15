@@ -1,0 +1,54 @@
+We are going to build a new project called as DocuSmith.
+It's an AI Report generator. But it not only generates report but also replaces content in a already built report with new content and it has this another feature called as proposal drafter, where people can chat with our AI SuDOCU and discuss with it to make stunning new proposals. So it has 3 core features:
+* Replace Content
+* Report Generator
+* Proposal Drafter.
+These are the 3 core funtions.
+This is figma devmode link where I designed the UI:
+https://www.figma.com/design/JktV85jKiJshMAvwCjoOKM/DocuSmith?node-id=0-1&m=dev&t=05ZiKHCCNILUEdWp-1
+How these core funtions work:
+	Replace Content: Users can upload a already built report into the upload content box and press analyze. Our AI will analyze the content and identify the headings sub-headings and contents from it. The next step requires the user to upload some reference to the reference box and if he wants to add any additional heading. Basically after the analysis the AI will provide the table of contents and the user can add more headings and subheadings if he wants to. Plus each of these heading and subheading boxes have another box beside them called no. of words. So when the user upload the new reference like code or abstract of the project(.txt, .jsx, .tsx, .js, .html, .css, .py...) the AI will analyze the reference and no .of words and generate new content and place them under appropriate headings and sub headings according to the reference and almost equal to the no. of words. We will also let the user export the report in different formats 
+	Report Generator: The Users can create the structure of format using add headings and sub headings buttons. Basically we let the user create the structure of the format by letting them enter the headings and subheading. Then the user needs to upload the reference code or abstracts so that the AI can generate content according to the project and make the project accurate. After uploading, the user has to just press submit an let AI do the work and make the user a fully fledged report. It should also make the table of contents and main pages like a fully fledged report. We will also let the user export the report in different formats.
+	Proposal Drafter: Users can chat with our AI just like chatgpt, Gemini and other chatbots and discuss with the user so that an stunning proposal can be made. Just give the chatbot idea of the project and let AI do the work. We will also let the user export the proposal in different formats.
+These are the core features of the project.
+I have already copy pasted the templates of UI I designed in the UIDesigns folder. You can refer to it as you want:
+The color palette and styles is:
+#2E8300 at 80% opacity
+#FFFFFF for strokes at 100% opacity - stroke thickness is 3 everywhere
+#000000 at 80% opacity
+font style: Jacques Francois - Regular
+Preview screen color: #494949
+Extra features:
+* The community page should only have content when some user decides to make the project he made public. So that other can use his reports as reference. So let the users have a note saying don't make sensitive content or confidential contents public.
+* The profile section should only have project history only if he makes any project otherwise show the note: No projects are made yet.
+* Also in proposal drafting, the chat history should only be shown if the user has previously chatted with the AI. Just like any other chatbot.
+I'm thinking about using firebase for backend and google auth. This is the code snippet:
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyApasLxq-LMsBUvtahQftrhR9PCq8kzJig",
+  authDomain: "docusmith-ef6f5.firebaseapp.com",
+  projectId: "docusmith-ef6f5",
+  storageBucket: "docusmith-ef6f5.firebasestorage.app",
+  messagingSenderId: "770279150",
+  appId: "1:770279150:web:3a9de2c1ea72650651d5ff",
+  measurementId: "G-JWWGL9JR62"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+Store all the sensitive keys and info in .env file and add it to .gitignore
+The database we can implement later.
+Also let the AI API key have a placeholder for now. we can implement it later.
+Rules:
+* Apply all the conditions strictly
+* Make the UI as much similar to the reference I gave you. You can refine it but don't change it.
+* All the buttons and funtions used must be worked properly
+  

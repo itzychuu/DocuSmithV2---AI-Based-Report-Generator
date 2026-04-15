@@ -1,0 +1,76 @@
+.static-page-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient( var(--bg-dark-80), var(--bg-dark-80)), url('/ImagesUsed/HandingOverSealedDocument.jpeg');
+  background-size: cover;
+  padding-top: 150px;
+}
+
+.static-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid var(--stroke-white);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.static-content h1 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.warning-box {
+  background: rgba(46, 131, 0, 0.2);
+  border: 1px solid var(--primary-green);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.empty-state, .empty-history {
+  padding: 60px;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 1.4rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--stroke-white);
+}
+
+.history-section h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  border-bottom: 2px solid var(--stroke-white);
+  padding-bottom: 10px;
+}

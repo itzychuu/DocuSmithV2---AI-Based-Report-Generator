@@ -1,0 +1,78 @@
+.dashboard-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, var(--bg-dark-80) 50%, var(--primary-green-80) 50%), url('/ImagesUsed/CoffeeLaptopBookPen.jpeg');
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.dashboard-hero h1 {
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+.dashboard-hero p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  opacity: 0.9;
+}
+
+.feature-cards {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.feature-card {
+  width: 350px;
+  height: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-footer {
+  height: 80px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-footer h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
