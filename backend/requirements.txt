@@ -5,3 +5,4 @@ pypdf
 python-docx
 requests
 reportlab
+python-multipart
