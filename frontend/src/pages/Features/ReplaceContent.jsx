@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Plus } from 'lucide-react';
 import './Features.css';
-import { replaceContentAPI, saveProject } from '../../services/api';
+import { replaceContentAPI, saveProject, exportFile } from '../../services/api';
 
 const ReplaceContent = () => {
   const navigate = useNavigate();
@@ -57,6 +57,21 @@ const ReplaceContent = () => {
     const title = contentFileName || 'Replace Content Project';
     saveProject(title, output);
     alert('Project saved!');
+  };
+
+  const handleExport = async (type = 'docx') => {
+    if (!output) return;
+    try {
+      const blob = await exportFile(output, type);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `replaced_content.${type}`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      alert('Error exporting content');
+    }
   };
 
   return (
@@ -131,7 +146,7 @@ const ReplaceContent = () => {
         <div className="preview-actions">
           <button className="btn-outline" onClick={handleAnalyze}>Generate Again</button>
           <button className="btn-outline" onClick={handleSave}>Save</button>
-          <button className="btn-outline">Export</button>
+          <button className="btn-outline" onClick={() => handleExport('docx')}>Export</button>
         </div>
       </div>
     </div>

@@ -254,8 +254,8 @@ async def export(type: str, data: dict = Body(...)):
         return {"error": "Export failed. Please try again."}
 
 import os
-if os.path.exists("../dist"):
-    app.mount("/", StaticFiles(directory="../dist", html=True), name="static")
+if os.path.exists("../frontend/dist"):
+    app.mount("/", StaticFiles(directory="../frontend/dist", html=True), name="static")
 
 if __name__ == "__main__":
     import uvicorn
